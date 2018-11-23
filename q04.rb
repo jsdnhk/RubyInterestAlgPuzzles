@@ -2,24 +2,21 @@
 # Separate a stick by cutting
 
 
-def get_times_cutting(parts: nil, ppl: nil)
-  bln_return = true
-  cutting_time = 0
-  begin
-    raise ("Invalid param input: parts: #{parts}, ppl: #{ppl}") unless parts and ppl and parts > 0 and ppl >0 and parts >= ppl
-    cur_stick = 1
-    while parts > cur_stick
-      cur_stick += cur_stick < ppl ? cur_stick : ppl
-      cutting_time += 1
-    end
-  rescue Exception => ex
-    puts (ex.message)
-    bln_return = false
-  ensure
-    puts("for parts: #{parts}, ppl: #{ppl}, the required cutting_time: #{cutting_time}!") if bln_return
+def get_times_cutting(parts: nil, ppl: nil, stick: nil, layer: nil)
+  layer += 1
+  puts ("get_times_cutting(parts: #{parts}, ppl: #{ppl}, stick: #{stick}, layer: #{layer})")
+  if stick >= parts
+    puts ("return 0")
+    0 #Finish cutting
+  #stick < parts
+  elsif stick <= ppl
+    1 + get_times_cutting(parts: parts, ppl: ppl, stick: stick * 2, layer: layer)
+  elsif stick > ppl
+    1 + get_times_cutting(parts: parts, ppl: ppl, stick: stick + ppl, layer: layer)
   end
 end
 
-
-get_times_cutting(parts: 20, ppl: 3)
-get_times_cutting(parts: 100, ppl: 5)
+#puts get_times_cutting(parts: 22, ppl: 3, stick: 18, layer: 0)
+#puts get_times_cutting(parts: 10, ppl: 2, stick: 1)
+puts get_times_cutting(parts: 20, ppl: 3, stick: 1, layer: 0)
+puts get_times_cutting(parts: 100, ppl: 5, stick: 1, layer: 0)
