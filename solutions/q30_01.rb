@@ -1,4 +1,4 @@
-N = 20
+﻿N = 20
 
 def set_tap(remain)
   return 1 if remain == 1

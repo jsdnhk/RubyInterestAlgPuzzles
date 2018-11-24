@@ -1,4 +1,4 @@
-var memo = {};
+﻿var memo = {};
 function cut_cake(w, h, diff){
   if (w < h){
     var temp = w; w = h; h = temp;
@@ -13,7 +13,7 @@ function cut_cake(w, h, diff){
     return Infinity;
   }
 
-  /* 横向纵向切分 */
+  /* 橫向縱向切分 */
   var result = new Array();
   for (var i = 1; i <= parseInt(w / 2); i++){
     result.push(h + cut_cake(w - i, h, i * h - diff));
@@ -21,7 +21,7 @@ function cut_cake(w, h, diff){
   for (var i = 1; i <= parseInt(h / 2); i++){
     result.push(w + cut_cake(w, h - i, w * i - diff));
   }
-  /* 从横向纵向两种切法中选较小的一个 */
+  /* 從橫向縱向兩種切法中選較小的一個 */
   return memo[[w, h, diff]] = Math.min.apply(null, result);
 }
 console.log(cut_cake(16, 12, 0));

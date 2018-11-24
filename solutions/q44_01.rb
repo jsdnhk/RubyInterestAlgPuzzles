@@ -1,9 +1,9 @@
-require "prime"
+﻿require "prime"
 
-# 获取3位的质数
+# 獲取3位的質數
 primes = Prime.each(1000).select{|i| i >= 100}
 
-# 以首位数字生成哈希表
+# 以首位數字生成哈希表
 prime_h = {0 => []}
 primes.chunk{|i| i / 100}.each{|k, v|
   prime_h[k] = v

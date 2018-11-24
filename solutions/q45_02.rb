@@ -1,4 +1,4 @@
-count = 0
+﻿count = 0
 (1..7).to_a.permutation.each{|ary|
   ary.size.times{|i|
     j = ary.index(i + 1)

@@ -1,4 +1,4 @@
-function next_dice(dice){
+﻿function next_dice(dice){
   var top = parseInt(dice / Math.pow(6, 5));
   var left = parseInt(dice / Math.pow(6, 5 - top));
   var right = dice % Math.pow(6, 5 - top);

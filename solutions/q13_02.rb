@@ -1,4 +1,4 @@
-expression = "READ+WRITE+TALK==SKILL"
+﻿expression = "READ+WRITE+TALK==SKILL"
 nums = expression.split(/[^a-zA-Z]/)
 chars = nums.join().split("").uniq
 head = nums.map{|num| num[0]}

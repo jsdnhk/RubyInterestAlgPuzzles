@@ -1,4 +1,4 @@
-# 设置反转用的掩码
+﻿# 設置反轉用的掩碼
 mask = Array.new(16)
 4.times{|row|
   4.times{|col|
@@ -8,18 +8,18 @@ mask = Array.new(16)
 }
 
 max = 0
-# 保存步骤数目的数组
+# 保存步驟數目的數組
 steps = Array.new(1 << 16, -1)
-# 从所有方格都为白色开始
+# 從所有方格都為白色開始
 steps[0] = 0
-# 检查对象的数组
+# 檢查對象的數組
 scanner = [0]
 while scanner.size > 0 do
   check = scanner.shift
   next_steps = steps[check] + 1
   16.times{|i|
     n = check ^ mask[i]
-    # 如果未检查过，则进一步检索
+    # 如果未檢查過，則進一步檢索
     if steps[n] == -1 then
       steps[n] = next_steps
       scanner.push(n)
@@ -28,6 +28,6 @@ while scanner.size > 0 do
   }
 end
 
-puts max # 最大步骤数
-puts steps.index(max).to_s(2) # 初始状态的方格：全部黑色
-p steps.select{|i| i == -1} # 不存在不能全部变为白色的初始状态
+puts max # 最大步驟數
+puts steps.index(max).to_s(2) # 初始狀態的方格：全部黑色
+p steps.select{|i| i == -1} # 不存在不能全部變為白色的初始狀態

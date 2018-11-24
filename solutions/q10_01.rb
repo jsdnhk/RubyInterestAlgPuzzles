@@ -1,4 +1,4 @@
-european = [0, 32, 15, 19, 4, 21, 2, 25, 17, 34, 6, 27, 13, 36,
+﻿european = [0, 32, 15, 19, 4, 21, 2, 25, 17, 34, 6, 27, 13, 36,
             11, 30, 8, 23, 10, 5, 24, 16, 33, 1, 20, 14, 31, 9,
             22, 18, 29, 7, 28, 12, 35, 3, 26]
 american = [0, 28, 9, 26, 30, 11, 7, 20, 32, 17, 5, 22, 34, 15,
@@ -10,10 +10,10 @@ def sum_max(roulette, n)
   roulette.size.times{|i|
     tmp = 0
     if i + n <= roulette.size then
-      # 不包含数组两端元素的情况
+      # 不包含數組兩端元素的情況
       tmp = roulette[i, n].inject(:+)
     else
-      # 包含数组两端元素的情况
+      # 包含數組兩端元素的情況
       tmp = roulette[0, (i + n) % roulette.size].inject(:+)
       tmp += roulette[i..-1].inject(:+)
     end

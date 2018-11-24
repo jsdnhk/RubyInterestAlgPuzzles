@@ -1,4 +1,4 @@
-def shuffle(card)
+﻿def shuffle(card)
   left = card.take(card.size / 2)
   right = card.drop(card.size / 2)
   result = []

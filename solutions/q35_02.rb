@@ -1,4 +1,4 @@
-n = (1..50).select{|i| (i % 2 > 0) || (i % 5 > 0)}
+﻿n = (1..50).select{|i| (i % 2 > 0) || (i % 5 > 0)}
 answer = Array.new
 k = 1
 while (n.size > 0) do

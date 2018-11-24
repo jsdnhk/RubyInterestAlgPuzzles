@@ -1,23 +1,23 @@
-N = 4
+﻿N = 4
 @count = Hash.new(0)
 
 def search()
-  # 把各行设置为数值
+  # 把各行設置為數值
   (0..(2**N-1)).to_a.repeated_permutation(N).each{|rows|
-    # 计算各列○的个数
+    # 計算各列○的個數
     col_count = Array.new(N, 0)
     N.times{|c|
       rows.each{|r|
         col_count[c] += 1 if (r & (1 << c) > 0)
       }
     }
-    # 计算各行○的个数
+    # 計算各行○的個數
     row_count = rows.map{|r| r.to_s(2).count("1")}
-    # 用哈希表记录行和列组合的出现次数
+    # 用哈希表記錄行和列組合的出現次數
     @count[row_count + col_count] += 1
   }
 end
 
 search()
-# 输出只出现一次的组合
+# 輸出只出現一次的組合
 puts @count.select{|k, v| v == 1}.count

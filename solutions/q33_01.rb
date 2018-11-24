@@ -1,4 +1,4 @@
-# 设置棋盘
+﻿# 設置棋盤
 @board = Array.new(11).map!{Array.new(11)}
 (0..10).each{|i|
   (0..10).each{|j|
@@ -6,17 +6,17 @@
   }
 }
 
-# 初始化统计变量
+# 初始化統計變量
 count = 0
 
-# 递归遍历
+# 遞歸遍歷
 def search(x, y, dx, dy)
   return if @board[x][y]
   @check[x * 10 + y] = 1
   search(x + dx, y + dy, dx, dy)
 end
 
-# 按顺序放置飞车和角行进行遍历
+# 按順序放置飛車和角行進行遍歷
 (1..9).each{|hy|
   (1..9).each{|hx|
     (1..9).each{|ky|

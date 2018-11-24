@@ -1,6 +1,6 @@
-n = 5
+﻿n = 5
 
-# 设置初始值
+# 設置初始值
 cards = [(1..n*2).to_a]
 answer = (1..n*2).to_a.reverse
 

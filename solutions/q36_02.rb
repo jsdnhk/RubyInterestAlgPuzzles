@@ -1,4 +1,4 @@
-# 获取下一个数字序列
+﻿# 獲取下一個數字序列
 def next_dice(dice)
   top = dice.div(6**5)
   left, right = dice.divmod(6**(5 - top))
@@ -9,13 +9,13 @@ count = 0
 (6**6).times{|i|
   check = Array.new
 
-  # 找下一个序列直到进入循环
+  # 找下一個序列直到進入循環
   while !check.include?(i) do
     check << i
     i = next_dice(i)
   end
 
-  # 定位循环位置，如果在循环范围外，则计数
+  # 定位循環位置，如果在循環範圍外，則計數
   count += 1 if check.index(i) != 0
 }
 puts count

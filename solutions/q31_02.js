@@ -1,4 +1,4 @@
-function route(width, height, back_y){
+﻿function route(width, height, back_y){
   if (width == 1) return (back_y == height) ? back_y : back_y + 2;
   if (height == 1) return (back_y == 0) ? 2 : 1;
   var total = 0;

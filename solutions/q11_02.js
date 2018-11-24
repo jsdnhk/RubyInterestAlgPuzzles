@@ -1,4 +1,4 @@
-var memo = new Array()
+﻿var memo = new Array()
 function fib(n){
   if (memo[n] == null){
     if ((n == 0) || (n == 1)){

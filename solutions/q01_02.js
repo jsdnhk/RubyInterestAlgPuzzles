@@ -1,9 +1,9 @@
-/* 为字符串类型添加返回逆序字符串的方法 */
+﻿/* 為字符串類型添加返回逆序字符串的方法 */
 String.prototype.reverse = function (){
   return this.split("").reverse().join("");
 }
 
-/* 从11开始检索 */
+/* 從11開始檢索 */
 var num = 11;
 while (true){
   if ((num.toString() == num.toString().reverse()) &&
@@ -12,6 +12,6 @@ while (true){
     console.log(num);
     break;
   }
-  /* 只检索奇数，每次加2 */
+  /* 只檢索奇數，每次加2 */
   num += 2;
 }

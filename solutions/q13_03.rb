@@ -1,4 +1,4 @@
-count = 0
+﻿count = 0
 (0..9).to_a.permutation(6){|e, a, d, t, k, l|
   if ((a + t == 8) || (a + t == 9) || (a + t == 10)) &&
      ((a + e == 8) || (a + e == 9) || (a + e == 10)) &&

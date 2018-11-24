@@ -1,4 +1,4 @@
-N = 6
+﻿N = 6
 @cnt = 0
 def search(man_x, man_y, woman_x, woman_y, meet)
   if (man_x <= N) && (man_y <= N) &&

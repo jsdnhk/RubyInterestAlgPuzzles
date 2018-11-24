@@ -1,4 +1,4 @@
-#include <stdio.h>
+﻿#include <stdio.h>
 
 #define N 5
 #define MASK (1 << (N * N)) - 1

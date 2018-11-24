@@ -1,11 +1,11 @@
-# 长方形大小
+﻿# 長方形大小
 W, H = 5, 4
 @width, @height = W + 2, H + 2
 
 NONE, BLUE, WHITE, WALL = 0, 1, 2, 9
 
 map = Array.new(@width * @height, 0)
-# 设置外边界
+# 設置外邊界
 @width.times{|i|
   map[i] = WALL
   map[i + @width * (@height - 1)] = WALL
@@ -15,11 +15,11 @@ map = Array.new(@width * @height, 0)
   map[(i + 1) * @width - 1] = WALL
 }
 
-# 从(1,1)开始
+# 從(1,1)開始
 map[@width + 1] = BLUE
 @maps = {map => false}
 
-# 采用广度优先递归地对格子涂色
+# 採用廣度優先遞歸地對格子塗色
 def fill(depth, color)
   return if depth == 0
   new_maps = {}
@@ -45,10 +45,10 @@ def fill(depth, color)
   fill(depth - 1, color)
 end
 
-# 把一半方格涂成蓝色
+# 把一半方格塗成藍色
 fill(W * H / 2 - 1, BLUE)
 
-# 把白色涂进空着的方格上
+# 把白色塗進空著的方格上
 new_maps = {}
 @maps.each{|k, v|
   pos = k.index(NONE)
@@ -58,10 +58,10 @@ new_maps = {}
 }
 @maps = new_maps
 
-# 涂上白色
+# 塗上白色
 fill(W * H / 2 - 1, WHITE)
 
-# 统计所有方格全部上色完毕的组合
+# 統計所有方格全部上色完畢的組合
 count = 0
 @maps.each{|m|
   count += 1 if !(m.include?(NONE))

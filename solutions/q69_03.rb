@@ -1,5 +1,5 @@
-memo = {0x000fff => 0, 0xfff000 => 0, 0xcccccc => 0, 0x333333 => 0}
-queue = [0x000fff, 0x333333] # 只保留左上为0的初始值
+﻿memo = {0x000fff => 0, 0xfff000 => 0, 0xcccccc => 0, 0x333333 => 0}
+queue = [0x000fff, 0x333333] # 只保留左上為0的初始值
 W, H = 4, 6
 
 mask = []
@@ -17,7 +17,7 @@ while queue.size > 0 do
     mask.each{|m|
       if ((q & m) != 0) && ((q & m) != m) && !memo.key?(q ^ m) then
         memo[q ^ m] = depth
-        # 缓存按位取反的结果
+        # 緩存按位取反的結果
         memo[(q ^ m) ^ ((1 << W * H) - 1)] = depth
         next_queue.push(q ^ m)
       end

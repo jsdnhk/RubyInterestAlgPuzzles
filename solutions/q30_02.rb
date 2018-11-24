@@ -1,4 +1,4 @@
-N = 20
+﻿N = 20
 
 @memo = {1 => 1}
 def set_tap(remain)

@@ -1,4 +1,4 @@
-n = 16
+﻿n = 16
 pair = Array.new(n / 2 + 1)
 pair[0] = 1
 

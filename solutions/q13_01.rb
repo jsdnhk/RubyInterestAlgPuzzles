@@ -1,4 +1,4 @@
-count = 0
+﻿count = 0
 (0..9).to_a.permutation do |r, e, a, d, w, i, t, l, k, s|
   next if r == 0 or w == 0 or t == 0 or s == 0
   read = r * 1000 + e * 100 + a * 10 + d

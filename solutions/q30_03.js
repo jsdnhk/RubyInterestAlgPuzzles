@@ -1,4 +1,4 @@
-const N = 20;
+﻿const N = 20;
 var memo = [];
 memo[1] = 1;
 

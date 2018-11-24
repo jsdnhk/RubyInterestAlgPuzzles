@@ -1,9 +1,9 @@
-N = 6
+﻿N = 6
 
 max_cnt = 0
-(1..N - 1).to_a.permutation(N - 1){|l|   # 左侧的顺序
-  (1..N - 1).to_a.permutation(N - 1){|r| # 右侧的顺序
-    # 设置连线
+(1..N - 1).to_a.permutation(N - 1){|l|   # 左側的順序
+  (1..N - 1).to_a.permutation(N - 1){|r| # 右側的順序
+    # 設置連線
     path = []
     left = 0
     right = r[0]
@@ -15,7 +15,7 @@ max_cnt = 0
     }
     path.push([left, 0])
 
-    # 判断连线是否相交
+    # 判斷連線是否相交
     cnt = 0
     (N * 2 - 1).times{|i|
       (i + 1).upto(N * 2 - 2){|j|

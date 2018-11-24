@@ -1,4 +1,4 @@
-W, H = 10, 10
+﻿W, H = 10, 10
 parking = [9] * (W + 1) + ([1] * W + [9]) * H + [9] * (W + 1)
 
 @goal = parking.clone

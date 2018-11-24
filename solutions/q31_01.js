@@ -1,4 +1,4 @@
-var square = 6;
+﻿var square = 6;
 var count = 0;
 var is_used = new Array();
 for (var i = 0; i <= square; i++){

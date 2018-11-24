@@ -1,4 +1,4 @@
-@memo = {}
+﻿@memo = {}
 def fib(n)
   return @memo[n] if @memo.has_key?(n)
   if (n == 0) || (n == 1) then

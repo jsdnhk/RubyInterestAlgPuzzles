@@ -1,4 +1,4 @@
-# 设置一个保持世界杯参赛国的数组
+﻿# 設置一個保持世界盃參賽國的數組
 @country = ["Brazil", "Croatia", "Mexico", "Cameroon",
             "Spain", "Netherlands", "Chile", "Australia",
             "Colombia", "Greece", "Cote d'Ivoire", "Japan",
@@ -8,7 +8,7 @@
             "Nigeria", "Germany", "Portugal", "Ghana",
             "USA", "Belgium", "Algeria", "Russia",
             "Korea Republic"]
-# 是否使用过的标记数组
+# 是否使用過的標記數組
 @is_used = Array.new(@country.size, false)
 
 def search(prev, depth)
@@ -26,12 +26,12 @@ def search(prev, depth)
   @max_depth = [@max_depth, depth].max if is_last
 end
 
-# 从各个国家开始
+# 從各個國家開始
 @max_depth = 0
 @country.each_with_index{|c, i|
   @is_used[i] = true
   search(c, 1)
   @is_used[i] = false
 }
-# 输出最大深度（即连续的国名数目）
+# 輸出最大深度（即連續的國名數目）
 puts @max_depth

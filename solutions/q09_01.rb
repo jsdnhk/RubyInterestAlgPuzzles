@@ -1,4 +1,4 @@
-boy, girl = 20, 10
+﻿boy, girl = 20, 10
 boy, girl = boy + 1, girl + 1
 ary = Array.new(boy * girl){0}
 ary[0] = 1

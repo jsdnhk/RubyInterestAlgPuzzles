@@ -1,4 +1,4 @@
-N = 9
+﻿N = 9
 @max = 0
 @max_list = Hash.new
 

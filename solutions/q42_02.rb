@@ -1,13 +1,13 @@
-n = 5
+﻿n = 5
 
-# 顺序搜索的初始值
+# 順序搜索的初始值
 fw = [(1..n*2).to_a]
 # 逆序搜索的初始值
 bw = [(1..n*2).to_a.reverse]
 
 depth = 1
 while true do
-  # 顺序搜索
+  # 順序搜索
   fw = fw.each_with_object([]) do |c, result|
     1.upto(n){|i| result << c[i, n] + c[0, i] + c[i + n..-1]}
   end
